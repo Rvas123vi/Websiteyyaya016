@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Jualan Keren</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="terang"> <div id="loading-screen">
+        <img src="https://i.pinimg.com/originals/3d/c8/9f/3dc89f59e3a9d8c38d0569548139b0f9.gif" alt="Loading..." class="loading-flower"> </div>
+
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg"> Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <header>
+        <div class="top-buttons">
+            <button id="theme-toggle-button" title="Ganti Tema"><i class="fas fa-sun"></i> <i class="fas fa-moon"></i></button>
+            <button id="music-toggle-button" title="Musik On/Off">🔊</button>
+        </div>
+        <h1>Website Jualan Anda</h1>
+        <nav>
+            <a href="#home" class="nav-button">🏠 Home</a>
+            <a href="#info" class="nav-button">ℹ️ Informasi</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="produk-container">
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/FFA500/FFFFFF?text=Produk+1" alt="Produk 1">
+                <h3>Nama Produk 1</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 1')">🛒 Beli Sekarang</button>
+            </div>
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/007bff/FFFFFF?text=Produk+2" alt="Produk 2">
+                <h3>Nama Produk 2</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 2')">🛒 Beli Sekarang</button>
+            </div>
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/FFA500/FFFFFF?text=Produk+3" alt="Produk 3">
+                <h3>Nama Produk 3</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 3')">🛒 Beli Sekarang</button>
+            </div>
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/007bff/FFFFFF?text=Produk+4" alt="Produk 4">
+                <h3>Nama Produk 4</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 4')">🛒 Beli Sekarang</button>
+            </div>
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/FFA500/FFFFFF?text=Produk+5" alt="Produk 5">
+                <h3>Nama Produk 5</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 5')">🛒 Beli Sekarang</button>
+            </div>
+            <div class="produk-card">
+                <img src="https://via.placeholder.com/200x150/007bff/FFFFFF?text=Produk+6" alt="Produk 6">
+                <h3>Nama Produk 6</h3>
+                <button class="wa-button" onclick="hubungiWhatsApp('Produk 6')">🛒 Beli Sekarang</button>
+            </div>
+        </section>
+
+        <section id="info" class="info-section">
+            <h2>Informasi Pemilik</h2>
+            <div class="profile-container">
+                <div class="profile-pic-container">
+                    <img src="https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Foto+Anda" alt="Foto Profil" id="profile-pic">
+                </div>
+                <div class="profile-info">
+                    <p>Nama: [Nama Anda]</p>
+                    <p>Deskripsi singkat tentang Anda atau toko Anda.</p>
+                    <p>Kontak lain jika ada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="utility-section">
+            <div class="calculator-container">
+                <h3>Kalkulator Mini</h3>
+                <div class="calculator">
+                    <input type="text" id="calc-display" readonly>
+                    <div class="calc-buttons">
+                        <button onclick="appendToDisplay('7')">7</button>
+                        <button onclick="appendToDisplay('8')">8</button>
+                        <button onclick="appendToDisplay('9')">9</button>
+                        <button class="operator" onclick="appendToDisplay('/')">/</button>
+                        <button onclick="appendToDisplay('4')">4</button>
+                        <button onclick="appendToDisplay('5')">5</button>
+                        <button onclick="appendToDisplay('6')">6</button>
+                        <button class="operator" onclick="appendToDisplay('*')">x</button>
+                        <button onclick="appendToDisplay('1')">1</button>
+                        <button onclick="appendToDisplay('2')">2</button>
+                        <button onclick="appendToDisplay('3')">3</button>
+                        <button class="operator" onclick="appendToDisplay('-')">-</button>
+                        <button onclick="appendToDisplay('0')">0</button>
+                        <button onclick="appendToDisplay('.')">.</button>
+                        <button onclick="clearDisplay()">C</button>
+                        <button class="operator" onclick="appendToDisplay('+')">+</button>
+                        <button class="equals" onclick="calculateResult()">=</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Kirim Pesan</h3>
+                <form id="contact-form">
+                    <input type="email" id="user-email" placeholder="Email Anda" required>
+                    <textarea id="user-message" placeholder="Pesan Anda" rows="4" required></textarea>
+                    <button type="submit" class="send-button">Kirim Pesan 📧</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://github.com/NAMA_PENGGUNA_GITHUB_ANDA" target="_blank" class="github-logo" title="Profil GitHub Saya">
+            <i class="fab fa-github"></i>
+        </a>
+        <button id="scroll-to-top" title="Kembali ke Atas">⬆️</button>
+    </footer>
+
+    <canvas id="background-animation"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
